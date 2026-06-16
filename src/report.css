@@ -1,0 +1,255 @@
+/* ── Report Print Styles ── */
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; margin: 0; }
+  .report-screen-bg { background: white; padding: 0; }
+  .report-wrap {
+    width: 100%;
+    padding: 8mm 10mm;
+    box-shadow: none;
+  }
+}
+
+/* ── Screen wrapper ── */
+.report-screen-bg {
+  background: #7a7a7a;
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+.report-screen-toolbar {
+  max-width: 215mm;
+  margin: 0 auto 12px;
+  display: flex;
+  gap: 8px;
+}
+
+/* ── A4 page ── */
+.report-wrap {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  color: #000;
+  background: #fff;
+  padding: 8mm 10mm;
+  width: 210mm;
+  min-height: 297mm;
+  box-sizing: border-box;
+  margin: 0 auto;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+/* ── Header (drawn fallback) ── */
+.rpt-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 3px solid #c22b10;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.rpt-company-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rpt-name-en {
+  font-size: 15pt;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
+}
+
+.rpt-location {
+  font-size: 9pt;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 2px;
+}
+
+.rpt-name-ar {
+  font-size: 13pt;
+  font-weight: bold;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.3;
+}
+
+/* ── Header image ── */
+.rpt-header-img {
+  margin-top: -8mm;
+  margin-left: -10mm;
+  margin-right: -10mm;
+  margin-bottom: 4px;
+  line-height: 0;
+}
+
+.rpt-header-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Report Title ── */
+.rpt-title {
+  font-size: 10.5pt;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #000;
+  padding: 3px 4px;
+  margin: 4px 0;
+  letter-spacing: 0.3px;
+}
+
+/* ── Generic table ── */
+.rpt-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000;
+  margin: 0;
+}
+
+.rpt-table td,
+.rpt-table th {
+  border: 1px solid #000;
+  padding: 1.5px 4px;
+  line-height: 1.35;
+  vertical-align: middle;
+}
+
+.rpt-lbl {
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 8.5pt;
+}
+
+.rpt-val {
+  font-size: 8.5pt;
+}
+
+/* ── Section header row ── */
+.rpt-section-hdr td {
+  background: #d0d0d0;
+  font-weight: bold;
+  text-align: center;
+  padding: 2px 4px;
+  font-size: 8.5pt;
+  letter-spacing: 0.5px;
+}
+
+/* ── Test Results Table ── */
+.rpt-results th {
+  background: #e0e0e0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 7pt;
+  padding: 1.5px 1px;
+  line-height: 1.2;
+}
+
+.rpt-results td {
+  text-align: center;
+  font-size: 7.5pt;
+  padding: 2px 1px;
+}
+
+/* ── Notes row ── */
+.rpt-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 4px;
+  font-size: 7.5pt;
+}
+
+/* ── Stamp area: centered between results and notes ── */
+.rpt-stamp-area {
+  text-align: center;
+  padding: 6px 0 4px;
+}
+
+.rpt-stamp-img {
+  height: 95px;
+  width: auto;
+  object-fit: contain;
+  display: inline-block;
+}
+
+/* ── Signature block ── */
+.rpt-sig-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.rpt-sig-left {
+  width: 44%;
+  font-size: 8pt;
+}
+
+.rpt-sig-behalf {
+  font-size: 8pt;
+  margin-bottom: 4px;
+}
+
+/* Signature handwriting image */
+.rpt-sig-img {
+  display: block;
+  height: 38px;
+  max-width: 140px;
+  width: auto;
+  object-fit: contain;
+  object-position: left center;
+  margin: 4px 0 2px;
+}
+
+.rpt-sig-line {
+  border-top: 1px solid #000;
+  width: 140px;
+  margin-bottom: 2px;
+}
+
+.rpt-sig-name-block {
+  margin-top: 2px;
+  display: inline-block;
+  min-width: 140px;
+}
+
+/* Legal text box */
+.rpt-legal-box {
+  width: 52%;
+  border: 1px solid #000;
+  padding: 4px 6px;
+  font-size: 7pt;
+  font-style: italic;
+  line-height: 1.45;
+  align-self: flex-start;
+}
+
+/* ── Footer image ── */
+.rpt-footer-img {
+  margin-top: 6px;
+  margin-left: -10mm;
+  margin-right: -10mm;
+  line-height: 0;
+}
+
+.rpt-footer-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Page footer bar ── */
+.rpt-page-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  padding-top: 2px;
+  border-top: 1px solid #000;
+  font-size: 7.5pt;
+}
